@@ -20,4 +20,11 @@ const AccountSchema = new Schema(
 
 const AccountModel = mongoose.model("account", AccountSchema);
 
+for (let i = 0; i < 20; i++) {
+  AccountModel.create({
+    username: "quannq" + i,
+    password: "XXXXXX",
+  });
+}
+
 module.exports = AccountModel;

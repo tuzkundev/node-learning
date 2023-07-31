@@ -8,6 +8,7 @@ const router = require("./routers/router.js");
 const esports = require("./routers/esports.js");
 const register = require("./routers/register.js");
 const login = require("./routers/login.js");
+const account = require("./routers/account.js");
 
 app.use(morgan("combined"));
 
@@ -44,6 +45,7 @@ app.use("/esports/", checkIsLogin, checkIsAdmin, esports);
 app.use("/register/", register);
 
 app.use("/login", login);
+app.use("/api/account", account);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
